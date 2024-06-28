@@ -1,0 +1,50 @@
+# Arquivos e diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de compilação do Kotlin
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Diretórios de compilação do Gradle
+/build/
+.gradle/
+
+# Diretórios de construção do IntelliJ IDEA
+/out/
+
+# Arquivos específicos do IntelliJ IDEA
+*.idea/
+*.iws
+*.iml
+*.ipr
+
+# Arquivos de configuração do Android Studio
+local.properties
+
+# Arquivos do Gradle Wrapper
+.gradle/
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# Arquivos de log do Gradle
+*.log
+
+# Arquivos de configuração locais
+*.properties
+
+# Arquivos de backup
+*.swp
+*.swo
+*.bak
+*.orig
+
+# Arquivos de dependências
+**/build/
+
+# Arquivos de caches
+.caches/
+
