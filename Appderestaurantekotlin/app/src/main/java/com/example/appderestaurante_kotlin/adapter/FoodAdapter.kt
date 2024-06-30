@@ -20,18 +20,16 @@ class FoodAdapter (private val context: Context, private val foodList: List<Food
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = foodList[position]
         food.imgFood?.let {holder.imgFood.setImageResource(it)}
-//        holder.imgFood.setBackgroundResource(foodList[position].imgFood!!)
         holder.txtFoodName.text = food.foodName
         holder.txtFoodDescription.text = food.foodDescription
+        holder.txtFoodId.text = "${food.id}"
     }
 
     inner class FoodViewHolder(binding: FoodItemBinding): RecyclerView.ViewHolder(binding.root) {
         val imgFood = binding.imgFood
         val txtFoodName = binding.txtFoodName
         val txtFoodDescription = binding.txtFoodDescription
+        val txtFoodId = binding.txtFoodId
 //        val txtPrice = binding.txtPrice
     }
 }
-
-//16 min
-//https://www.youtube.com/watch?v=yC13iAYPsoo&t=852s

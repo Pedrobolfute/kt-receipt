@@ -60,7 +60,8 @@ class MainActivity : AppCompatActivity() {
             imgFood = R.drawable.food1,
             foodName = "Food Name 1",
             foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 120.00"
+            price = "$ 120.00",
+            id = null
         )
         foodList.add(food1)
 
@@ -68,7 +69,8 @@ class MainActivity : AppCompatActivity() {
             imgFood = R.drawable.food2,
             foodName = "Food Name 2",
             foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 80.00"
+            price = "$ 80.00",
+            id = null
         )
         foodList.add(food2)
 
@@ -76,7 +78,8 @@ class MainActivity : AppCompatActivity() {
             imgFood = R.drawable.food3,
             foodName = "Food Name 3",
             foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 75.00"
+            price = "$ 75.00",
+            id = null
         )
         foodList.add(food3)
 
@@ -84,7 +87,8 @@ class MainActivity : AppCompatActivity() {
             imgFood = R.drawable.food4,
             foodName = "Food Name 4",
             foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 45.00"
+            price = "$ 45.00",
+            id = null
         )
         foodList.add(food4)
 
@@ -92,7 +96,8 @@ class MainActivity : AppCompatActivity() {
             imgFood = R.drawable.food5,
             foodName = "Food Name 5",
             foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 50.00"
+            price = "$ 50.00",
+            id = null
         )
         foodList.add(food5)
     }
