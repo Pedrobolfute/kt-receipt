@@ -24,6 +24,7 @@
         <activity android:name=".AddReceiptActivity"></activity>
         <activity android:name=".EditReceiptActivity"></activity>
         <activity android:name=".SeeReceiptActivity"></activity>
+        <activity android:name=".ViewRecipeActivity"></activity>
     </application>
 
 </manifest>
