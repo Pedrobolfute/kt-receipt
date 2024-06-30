@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnEditReceipt : Button = findViewById(R.id.btnEditReceipt)
         btnEditReceipt.setOnClickListener{
-            val intent = Intent(this, EditReceiptActivity::class.java)
+            val intent = Intent(this, EditRecipeActivity::class.java)
             startActivity(intent)
         }
     }
