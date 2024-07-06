@@ -15,6 +15,7 @@ class ViewRecipeActivity : AppCompatActivity() {
     private lateinit var txtReceiptIngredientsInfo: TextView
     private lateinit var txtReceiptIngredientsDescriptionInfo: TextView
     private lateinit var btnEditReceipt: Button
+    private lateinit var btnRemoveReceipt: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class ViewRecipeActivity : AppCompatActivity() {
         txtReceiptIngredientsInfo = findViewById(R.id.txtReceiptIngredientsInfo)
         txtReceiptIngredientsDescriptionInfo = findViewById(R.id.txtReceiptIngredientsDescriptionInfo)
         btnEditReceipt = findViewById(R.id.btnEditReceipt)
+        btnRemoveReceipt = findViewById(R.id.btnRemoveReceipt)
 
         recipeId = intent.getIntExtra("RECIPE_ID", -1)
         if (recipeId != -1) {
@@ -34,6 +36,10 @@ class ViewRecipeActivity : AppCompatActivity() {
             val editIntent = Intent(this, EditRecipeActivity::class.java)
             editIntent.putExtra("RECIPE_ID", recipeId)
             startActivityForResult(editIntent, 1)
+        }
+
+        btnRemoveReceipt.setOnClickListener {
+            removeRecipe()
         }
     }
 
@@ -46,6 +52,17 @@ class ViewRecipeActivity : AppCompatActivity() {
             txtRecipeTitle.text = recipeName
             txtReceiptIngredientsInfo.text = recipeIngredients
             txtReceiptIngredientsDescriptionInfo.text = recipePreparation
+        }
+    }
+
+    private fun removeRecipe() {
+        if (recipeId != -1) {
+            RecipeStore.receiptNames.removeAt(recipeId)
+            RecipeStore.receiptIngredients.removeAt(recipeId)
+            RecipeStore.receiptPreparations.removeAt(recipeId)
+
+            setResult(Activity.RESULT_OK) // Inform the previous activity that the recipe was removed
+            finish() // Close the current activity
         }
     }
 

@@ -47,12 +47,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SeeReceiptActivity::class.java)
             startActivity(intent)
         }
-
-        val btnEditReceipt : Button = findViewById(R.id.btnEditReceipt)
-        btnEditReceipt.setOnClickListener{
-            val intent = Intent(this, EditRecipeActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun getFood(){

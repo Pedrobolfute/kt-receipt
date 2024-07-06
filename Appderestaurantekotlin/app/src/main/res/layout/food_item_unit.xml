@@ -52,7 +52,6 @@
             android:text="Ingredientes:"
             android:textSize="20sp"
             android:textColor="@color/white"
-
             android:layout_margin="18dp"
             android:textStyle="bold"
             android:padding="16dp"
@@ -90,7 +89,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintWidth_percent="0.8"/>
 
-
         <TextView
             android:id="@+id/txtReceiptIngredientsDescriptionInfo"
             android:layout_width="0dp"
@@ -116,6 +114,20 @@
             android:backgroundTint="@color/red"
             android:layout_margin="10dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsDescriptionInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/btnRemoveReceipt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Remover receita"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/red"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/btnEditReceipt"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
