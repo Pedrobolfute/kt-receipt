@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/black">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/containerImgApp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/imgApp"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:background="@drawable/cooking1"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar receita"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerImgApp"/>
+
+        <EditText
+            android:id="@+id/receiptName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nome da receita"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:background="@drawable/edit_text_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txtWelcome"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintWidth_percent="0.8"/>
+
+        <EditText
+            android:id="@+id/receiptIngredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Ingredientes"
+            android:inputType="textMultiLine"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:background="@drawable/edit_text_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/receiptName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintWidth_percent="0.8"/>
+
+        <EditText
+            android:id="@+id/receiptPrepare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Modo de preparo"
+            android:inputType="textMultiLine"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:background="@drawable/edit_text_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/receiptIngredients"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintWidth_percent="0.8"/>
+
+        <Button
+            android:id="@+id/btnAddReceipt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Editar receita"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/red"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/receiptPrepare"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
