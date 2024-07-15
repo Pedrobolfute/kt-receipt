@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/black">
+        android:background="@color/white">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/containerImgApp"
@@ -28,7 +28,7 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:background="@drawable/cooking"/>
+                android:background="@drawable/profile"/>
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Titulo da receita"
             android:textSize="36sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_margin="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:text="Ingredientes:"
             android:textSize="20sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_margin="18dp"
             android:textStyle="bold"
             android:padding="16dp"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:text="Informações dos meus ingredientes."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_margin="10dp"
             android:padding="10dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsTitle"
@@ -81,7 +81,7 @@
             android:text="Modo de preparo: "
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_margin="20dp"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsInfo"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text="Informação do modo de preparo."
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_margin="20dp"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsDescriptionTitle"
@@ -109,9 +109,9 @@
             android:layout_height="wrap_content"
             android:text="Editar receita"
             android:textSize="18sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/gray"
             android:layout_margin="10dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsDescriptionInfo"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -123,9 +123,9 @@
             android:layout_height="wrap_content"
             android:text="Remover receita"
             android:textSize="18sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/gray"
             android:layout_margin="10dp"
             app:layout_constraintTop_toBottomOf="@id/btnEditReceipt"
             app:layout_constraintLeft_toLeftOf="parent"

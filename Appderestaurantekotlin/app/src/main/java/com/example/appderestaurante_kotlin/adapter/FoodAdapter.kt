@@ -39,6 +39,5 @@ class FoodAdapter (private val context: Context, private val foodList: List<Food
         val txtFoodDescription = binding.txtFoodDescription
         val txtFoodId = binding.txtFoodId
         val btnSeeReceipt = binding.btnSeeReceipt
-//        val txtPrice = binding.txtPrice
     }
 }

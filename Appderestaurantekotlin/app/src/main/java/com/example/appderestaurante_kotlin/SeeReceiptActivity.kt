@@ -42,14 +42,13 @@ class SeeReceiptActivity : AppCompatActivity() {
             val name = RecipeStore.receiptNames[i]
             val ingredients = RecipeStore.receiptIngredients[i]
             val preparation = RecipeStore.receiptPreparations[i]
-            val foodDescription = preparation.take(50)
             foodList.add(
                 Food(
                     id = i,
                     imgFood = R.drawable.cooking,
                     foodName = name,
-                    foodDescription = foodDescription,
-                    price = ""
+                    foodDescription = preparation,
+                    ingredients = ingredients
                 )
             )
         }
