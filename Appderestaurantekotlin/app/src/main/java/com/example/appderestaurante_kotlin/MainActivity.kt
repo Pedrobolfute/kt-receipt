@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         recyclerViewFood.setHasFixedSize(true)
         foodAdapter = FoodAdapter(this, foodList)
         recyclerViewFood.adapter = foodAdapter
-        getFood()
-
         setContentView(R.layout.initial_page)
 
         val btnAddReceipt: Button = findViewById(R.id.btnAddReceipt)
@@ -48,52 +46,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    private fun getFood(){
-        val food1 = Food(
-            imgFood = R.drawable.food1,
-            foodName = "Food Name 1",
-            foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 120.00",
-            id = null
-        )
-        foodList.add(food1)
-
-        val food2 = Food(
-            imgFood = R.drawable.food2,
-            foodName = "Food Name 2",
-            foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 80.00",
-            id = null
-        )
-        foodList.add(food2)
-
-        val food3 = Food(
-            imgFood = R.drawable.food3,
-            foodName = "Food Name 3",
-            foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 75.00",
-            id = null
-        )
-        foodList.add(food3)
-
-        val food4 = Food(
-            imgFood = R.drawable.food4,
-            foodName = "Food Name 4",
-            foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 45.00",
-            id = null
-        )
-        foodList.add(food4)
-
-        val food5 = Food(
-            imgFood = R.drawable.food5,
-            foodName = "Food Name 5",
-            foodDescription = "frefreo erfnrei frefoierf freiofre frefie",
-            price = "$ 50.00",
-            id = null
-        )
-        foodList.add(food5)
-    }
-
 }
