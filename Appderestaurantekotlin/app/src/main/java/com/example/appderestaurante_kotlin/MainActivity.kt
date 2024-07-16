@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appderestaurante_kotlin.adapter.FoodAdapter
 import com.example.appderestaurante_kotlin.databinding.ActivityMainBinding
 import com.example.appderestaurante_kotlin.model.Food
-
+import com.example.appderestaurante_kotlin.util.JsonHelper
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+
+        JsonHelper.loadRecipes(this)
 
         val recyclerViewFood: RecyclerView = binding.RecyclerViewFood
         recyclerViewFood.layoutManager = LinearLayoutManager(this)

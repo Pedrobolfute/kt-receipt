@@ -23,8 +23,6 @@ class SeeReceiptActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_see_receipt)
 
-        JsonHelper.loadRecipes(this)
-
         recyclerView = findViewById(R.id.recyclerViewRecipes)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
