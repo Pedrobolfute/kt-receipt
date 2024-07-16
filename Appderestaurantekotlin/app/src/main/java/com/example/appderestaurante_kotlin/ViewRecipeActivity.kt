@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appderestaurante_kotlin.model.RecipeStore
+import com.example.appderestaurante_kotlin.util.JsonHelper
+
 
 class ViewRecipeActivity : AppCompatActivity() {
 
@@ -57,10 +59,7 @@ class ViewRecipeActivity : AppCompatActivity() {
 
     private fun removeRecipe() {
         if (recipeId != -1) {
-            RecipeStore.receiptNames.removeAt(recipeId)
-            RecipeStore.receiptIngredients.removeAt(recipeId)
-            RecipeStore.receiptPreparations.removeAt(recipeId)
-
+            JsonHelper.removeRecipe(this, recipeId)
             setResult(Activity.RESULT_OK) // Inform the previous activity that the recipe was removed
             finish() // Close the current activity
         }

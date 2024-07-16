@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appderestaurante_kotlin.adapter.FoodAdapter
 import com.example.appderestaurante_kotlin.model.Food
 import com.example.appderestaurante_kotlin.model.RecipeStore
+import com.example.appderestaurante_kotlin.util.JsonHelper
 import com.google.android.material.textfield.TextInputEditText
 
 class SeeReceiptActivity : AppCompatActivity() {
@@ -21,6 +22,8 @@ class SeeReceiptActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_see_receipt)
+
+        JsonHelper.loadRecipes(this)
 
         recyclerView = findViewById(R.id.recyclerViewRecipes)
         recyclerView.layoutManager = LinearLayoutManager(this)

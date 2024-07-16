@@ -5,6 +5,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appderestaurante_kotlin.model.RecipeStore
+import com.example.appderestaurante_kotlin.util.JsonHelper
 
 class AddReceiptActivity : AppCompatActivity(){
 
@@ -26,6 +27,8 @@ class AddReceiptActivity : AppCompatActivity(){
                 RecipeStore.receiptNames.add(name)
                 RecipeStore.receiptIngredients.add(ingredients)
                 RecipeStore.receiptPreparations.add(preparation)
+
+                JsonHelper.saveRecipes(this)
 
                 receiptName.text.clear()
                 receiptIngredients.text.clear()
