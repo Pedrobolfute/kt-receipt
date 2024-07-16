@@ -16,19 +16,18 @@
             android:layout_height="100dp"
             app:cardCornerRadius="15dp"
             app:cardBackgroundColor="@color/white"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
             app:cardElevation="8dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/imgApp"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:background="@drawable/cooking"/>
+                android:src="@drawable/cooking"/>
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -39,68 +38,72 @@
             android:textSize="36sp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_margin="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerImgApp"/>
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/containerImgApp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <!-- Informações da Receita -->
         <TextView
             android:id="@+id/txtReceiptIngredientsTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Ingredientes:"
+            android:text="Ingredientes"
+            android:background="@color/blackinho"
+            android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:layout_margin="18dp"
+            android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/txtFoodTitle"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.8"/>
 
         <TextView
             android:id="@+id/txtReceiptIngredientsInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Informações dos meus ingredientes."
+            android:text="..."
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             android:padding="10dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsTitle"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.8"/>
 
         <TextView
             android:id="@+id/txtReceiptIngredientsDescriptionTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Modo de preparo: "
-            android:textSize="18sp"
+            android:text="Modo de preparo "
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_margin="20dp"
+            android:background="@color/blackinho"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsInfo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.8"/>
 
         <TextView
             android:id="@+id/txtReceiptIngredientsDescriptionInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Informação do modo de preparo."
+            android:text="..."
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsDescriptionTitle"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintWidth_percent="0.8"/>
 
         <Button
@@ -112,10 +115,10 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:backgroundTint="@color/red"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/txtReceiptIngredientsDescriptionInfo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <Button
             android:id="@+id/btnRemoveReceipt"
@@ -126,9 +129,9 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:backgroundTint="@color/red"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/btnEditReceipt"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

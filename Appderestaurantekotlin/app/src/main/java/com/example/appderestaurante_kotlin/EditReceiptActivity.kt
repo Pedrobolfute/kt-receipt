@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appderestaurante_kotlin.model.RecipeStore
+import com.example.appderestaurante_kotlin.util.JsonHelper
 
 class EditRecipeActivity : AppCompatActivity() {
 
@@ -56,6 +57,8 @@ class EditRecipeActivity : AppCompatActivity() {
             RecipeStore.receiptNames[recipeId] = recipeName
             RecipeStore.receiptIngredients[recipeId] = recipeIngredients
             RecipeStore.receiptPreparations[recipeId] = recipePreparation
+
+            JsonHelper.saveRecipes(this)
             setResult(Activity.RESULT_OK) // Indicate success
             finish() // Finish the activity and go back
         }
